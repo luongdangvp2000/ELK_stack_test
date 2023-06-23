@@ -17,11 +17,11 @@ spec:
             port => 5044
           }
         }
-        filter{
-          grok {
-            add_field => [ "received_at", "%{@timestamp}" ]
-          }
-        }
+        # filter{
+        #   grok {
+        #     add_field => [ "received_at", "%{@timestamp}" ]
+        #   }
+        # }
         output {
           elasticsearch {
             hosts => [ "${ELASTICSEARCH_ES_HOSTS}" ]
