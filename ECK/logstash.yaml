@@ -25,7 +25,7 @@ spec:
         output {
           elasticsearch {
             hosts => [ "${ELASTICSEARCH_ES_HOSTS}" ]
-            index => "logstash_vss_%{+YYYY.MM.dd}"
+  
             user => "${ELASTICSEARCH_ES_USER}"
             password => "${ELASTICSEARCH_ES_PASSWORD}"
             cacert => "${ELASTICSEARCH_ES_SSL_CERTIFICATE_AUTHORITY}"
